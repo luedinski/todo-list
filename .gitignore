@@ -5,3 +5,5 @@ todo-list-boot/.classpath
 todo-list-jpa/target/
 todo-list-service/target/
 todo-list-webapp/target/
+todo-list-boot/target/
+todo-list-rest/target/
