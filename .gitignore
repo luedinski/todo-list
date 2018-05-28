@@ -1,9 +1,4 @@
+.classpath
 .project
 .settings/
-todo-list-boot/.classpath
-.classpath
-todo-list-jpa/target/
-todo-list-service/target/
-todo-list-webapp/target/
-todo-list-boot/target/
-todo-list-rest/target/
+target/
