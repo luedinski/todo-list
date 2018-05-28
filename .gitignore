@@ -2,3 +2,6 @@
 .settings/
 todo-list-boot/.classpath
 .classpath
+todo-list-jpa/target/
+todo-list-service/target/
+todo-list-webapp/target/
