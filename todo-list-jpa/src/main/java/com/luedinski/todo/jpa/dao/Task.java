@@ -5,50 +5,61 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity(name = "TASK")
 public class Task {
 
-    @Id
-    @Column(name = "TASK_ID", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    @Column(name = "DESCR", length = 50)
-    private String name;
-    @Column(name = "DONE_STAT", nullable = false)
-    private boolean done;
+	@Id
+	@Column(name = "TASK_ID", nullable = false)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	@Column(name = "DESCR", length = 50)
+	private String name;
+	@Column(name = "DONE_STAT", nullable = false)
+	private boolean done;
+	@ManyToOne
+	private TodoList todoList;
 
-    public Task(String name) {
-        this.name = name;
-    }
+	public Task(String name) {
+		this.name = name;
+	}
 
-    protected Task() {
+	protected Task() {
 
-    }
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public boolean isDone() {
-        return done;
-    }
+	public boolean isDone() {
+		return done;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setDone(boolean done) {
-        this.done = done;
-    }
+	public void setDone(boolean done) {
+		this.done = done;
+	}
 
-    @Override
-    public String toString() {
-        return String.format("Task[id=%d, name='%s']", id, name);
-    }
+	public TodoList getTodoList() {
+		return todoList;
+	}
+
+	public void setTodoList(TodoList todoList) {
+		this.todoList = todoList;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Task[id=%d, name='%s']", id, name);
+	}
 
 }

@@ -7,7 +7,10 @@
 		<artifactId>todo-list-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	
+	<groupId>org.luedinski</groupId>
 	<artifactId>todo-list-jpa</artifactId>
+	
 	<dependencies>
 		<!-- Database (H2) -->
 		<dependency>
